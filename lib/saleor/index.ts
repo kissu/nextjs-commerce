@@ -418,7 +418,8 @@ export async function removeFromCart(cartId: string, lineIds: string[]): Promise
   return saleorCheckoutToVercelCart(saleorCheckout.checkoutLinesDelete.checkout);
 }
 
-// export async function getProductRecommendations(productId: string): Promise<Product[]> {
+// eslint-disable-next-line no-unused-vars
+export async function getProductRecommendations(productId: string): Promise<Product[]> {
   // @todo
-//   return [];
-// }
+  return [];
+}
