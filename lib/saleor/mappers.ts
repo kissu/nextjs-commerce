@@ -95,12 +95,12 @@ export function saleorVariantsToVercelVariants(
 }
 
 export function saleorCheckoutToVercelCart(checkout: CheckoutFragment): Cart {
-  const domain = new URL(process.env.SALEOR_INSTANCE_URL!).hostname;
+  const domain = new URL(process.env.SALEOR_INSTANCE_URL_GRAPHQL!).hostname;
   const checkoutUrl = new URL(`https://demo.saleor.io/checkout/`);
   checkoutUrl.searchParams.append('checkout', checkout.id);
   checkoutUrl.searchParams.append('locale', `en-US`);
   checkoutUrl.searchParams.append('channel', `default-channel`);
-  checkoutUrl.searchParams.append('saleorApiUrl', process.env.SALEOR_INSTANCE_URL!);
+  checkoutUrl.searchParams.append('saleorApiUrl', process.env.SALEOR_INSTANCE_URL_GRAPHQL!);
   checkoutUrl.searchParams.append('domain', domain);
 
   return {

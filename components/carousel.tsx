@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
-  const products = await getCollectionProducts('hidden-homepage-carousel');
+  const products = await getCollectionProducts('summer-picks');
 
   if (!products?.length) return null;
 
@@ -20,14 +20,14 @@ export async function Carousel() {
             {product.featuredImage ? (
               <Image
                 alt={product.title}
-                className="h-full object-contain"
+                className="object-contain h-full"
                 fill
                 sizes="33vw"
                 src={product.featuredImage.url}
               />
             ) : null}
             <div className="absolute inset-y-0 right-0 flex items-center justify-center">
-              <div className="inline-flex bg-white p-4 text-xl font-semibold text-black dark:bg-black dark:text-white">
+              <div className="inline-flex p-4 text-xl font-semibold text-black bg-white dark:bg-black dark:text-white">
                 {product.title}
               </div>
             </div>

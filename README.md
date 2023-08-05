@@ -40,7 +40,7 @@ Next.js Commerce requires a [Saleor account](https://saleor.io/).
 
 ### Add the Saleor URL to an environment variable
 
-Create a `SALEOR_INSTANCE_URL` environment variable and use your Saleor GraphQL API URL as the value (ie. `https://yourinstance.saleor.cloud/graphql/`).
+Create a `SALEOR_INSTANCE_URL_GRAPHQL` environment variable and use your Saleor GraphQL API URL as the value (ie. `https://yourinstance.saleor.cloud/graphql/`).
 
 ### Accessing the Saleor Storefront API
 

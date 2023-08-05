@@ -23,8 +23,8 @@ import {
 import { saleorCheckoutToVercelCart, saleorProductToVercelProduct } from './mappers';
 import { invariant } from './utils';
 
-const endpoint = process.env.SALEOR_INSTANCE_URL;
-invariant(endpoint, `Missing SALEOR_INSTANCE_URL!`);
+const endpoint = process.env.SALEOR_INSTANCE_URL_GRAPHQL;
+invariant(endpoint, `Missing SALEOR_INSTANCE_URL_GRAPHQL!`);
 
 type GraphQlError = {
   message: string;
@@ -42,7 +42,7 @@ export async function saleorFetch<Result, Variables>({
   headers?: HeadersInit;
   cache?: RequestCache;
 }): Promise<Result> {
-  invariant(endpoint, `Missing SALEOR_INSTANCE_URL!`);
+  invariant(endpoint, `Missing SALEOR_INSTANCE_URL_GRAPHQL!`);
 
   const result = await fetch(endpoint, {
     method: 'POST',
@@ -412,13 +412,13 @@ export async function removeFromCart(cartId: string, lineIds: string[]): Promise
 
   if (!saleorCheckout.checkoutLinesDelete?.checkout) {
     console.error(saleorCheckout.checkoutLinesDelete?.errors);
-    throw new Error(`Couldn't remove lines from checkout.`);
+    throw new Error(`Couldn't remove lines from checkout.`);
   }
 
   return saleorCheckoutToVercelCart(saleorCheckout.checkoutLinesDelete.checkout);
 }
 
-export async function getProductRecommendations(productId: string): Promise<Product[]> {
+// export async function getProductRecommendations(productId: string): Promise<Product[]> {
   // @todo
-  return [];
-}
+//   return [];
+// }

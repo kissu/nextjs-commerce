@@ -21,6 +21,10 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'prod.demo.saleor.cloud'
+      },
+      {
+        protocol: 'https',
+        hostname: process.env.SALEOR_INSTANCE_URL
       }
     ]
   }

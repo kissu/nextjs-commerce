@@ -16,9 +16,6 @@
     "test:e2e": "playwright test",
     "codegen": "graphql-codegen -r dotenv/config --config .graphqlrc.yml"
   },
-  "git": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
   },
