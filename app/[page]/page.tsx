@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 
 import Prose from 'components/prose';
 import { getPage } from 'lib/saleor';
 import { notFound } from 'next/navigation';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export const revalidate = 43200; // 12 hours in seconds
 

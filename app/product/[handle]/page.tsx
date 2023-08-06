@@ -13,7 +13,7 @@ import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct, getProductRecommendations } from 'lib/saleor';
 import { Image } from 'lib/types';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export async function generateMetadata({
   params

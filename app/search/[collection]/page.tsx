@@ -1,11 +1,11 @@
-import { getCollection, getCollectionProducts } from 'lib/saleor';
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+// import { getCollection, getCollectionProducts } from 'lib/saleor';
+// import { Metadata } from 'next';
+// import { notFound } from 'next/navigation';
 
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 // export async function generateMetadata({
 //   params
