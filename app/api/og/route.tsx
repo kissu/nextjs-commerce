@@ -19,7 +19,7 @@ export async function GET(req: NextRequest): Promise<any> {
 
     const title = searchParams.has('title')
       ? searchParams.get('title')?.slice(0, 100)
-      : process.env.SITE_NAME;
+      : process.env.SITE_NAME || 'site_name default';
 
     // return new ImageResponse(
     //   (
