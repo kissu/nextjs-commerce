@@ -22,7 +22,6 @@
   "dependencies": {
     "@graphql-typed-document-node/core": "3.2.0",
     "@headlessui/react": "^1.7.10",
-    "@vercel/og": "^0.5.4",
     "clsx": "^1.2.1",
     "framer-motion": "^8.4.0",
     "is-empty-iterable": "^3.0.0",

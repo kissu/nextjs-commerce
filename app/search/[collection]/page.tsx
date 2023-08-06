@@ -7,30 +7,30 @@ import ProductGridItems from 'components/layout/product-grid-items';
 
 export const runtime = 'edge';
 
-export async function generateMetadata({
-  params
-}: {
-  params: { collection: string };
-}): Promise<Metadata> {
-  const collection = await getCollection(params.collection);
+// export async function generateMetadata({
+//   params
+// }: {
+//   params: { collection: string };
+// }): Promise<Metadata> {
+//   const collection = await getCollection(params.collection);
 
-  if (!collection) return notFound();
+//   if (!collection) return notFound();
 
-  return {
-    title: collection.seo?.title || collection.title,
-    description:
-      collection.seo?.description || collection.description || `${collection.title} products`,
-    openGraph: {
-      images: [
-        {
-          url: `/api/og?title=${encodeURIComponent(collection.title)}`,
-          width: 1200,
-          height: 630
-        }
-      ]
-    }
-  };
-}
+//   return {
+//     title: collection.seo?.title || collection.title,
+//     description:
+//       collection.seo?.description || collection.description || `${collection.title} products`,
+//     openGraph: {
+//       images: [
+//         {
+//           url: `/api/og?title=${encodeURIComponent(collection.title)}`,
+//           width: 1200,
+//           height: 630
+//         }
+//       ]
+//     }
+//   };
+// }
 
 export default async function CategoryPage({ params }: { params: { collection: string } }) {
   const products = await getCollectionProducts(params.collection);
